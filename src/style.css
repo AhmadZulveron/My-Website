@@ -988,6 +988,57 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+/* Animation start */
+
+.slide-in-left,
+.slide-out-left {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-in-right,
+.slide-out-right {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* .slide-in-top {
+    transform: translateY(-100px);
+}
+
+.slide-in-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+.slide-in-left {
+  transform: translateX(-100px);
+}
+
+.slide-in-right {
+  transform: translateX(100px);
+}
+
+.slide-out-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-out-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-out-left {
+  transform: translateX(-100px);
+}
+
+.slide-out-right {
+  transform: translateX(100px);
+}
+
+/* Animation end */
+
 .hover\:border-primary:hover {
   --tw-border-opacity: 1;
   border-color: rgb(251 191 36 / var(--tw-border-opacity));
